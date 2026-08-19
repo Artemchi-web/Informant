@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Montserrat", serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+button{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    width: 50vw;
+    min-width: 350px;
+    height: 10vw;
+    border: none;
+    border-radius: 10px;
+    
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#next-audio-info{
+    margin-bottom: 25px;
+}
+
+#control-left{
+    width: 100px;
+    height: 100px;
+}
+
+#control-right{
+    width: 100px;
+    height: 100px;
+}
