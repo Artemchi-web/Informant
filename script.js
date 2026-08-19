@@ -24,7 +24,7 @@ let stops_list = document.getElementById("bus-stops-list")
 function render_stops() {
     for(let i = 0; i < stops_name.length; i++){
     let stop = document.createElement("li")
-    if (i == next_audio_score - 1) stop.innerHTML = `<b>${stops_name[i]}</b>`
+    if (i == next_audio_score - 2) stop.innerHTML = `<b>${stops_name[i]}</b>`
     else stop.innerHTML = `<span class="gray">${stops_name[i]}</span>`
 
     stops_list.appendChild(stop)
