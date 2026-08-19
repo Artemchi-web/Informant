@@ -24,6 +24,10 @@ button{
     margin-bottom: 10px;
 }
 
+button:active{
+    transform: scale(1.03);
+}
+
 #next-audio-info{
     margin-bottom: 25px;
 }
@@ -36,4 +40,12 @@ button{
 #control-right{
     width: 100px;
     height: 100px;
+}
+
+.container{
+    margin-bottom: 75px;
+}
+
+.gray{
+    color: rgb(138, 138, 138);
 }
