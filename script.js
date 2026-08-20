@@ -45,7 +45,7 @@ function render_depends(deperts, departures_list) {
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
     }
-    else if (bef_dep >= 0 && bef_dep <= 200){
+    else if (bef_dep >= 0 && bef_dep <= 150){
         departure.className = "yelloy depend"
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
