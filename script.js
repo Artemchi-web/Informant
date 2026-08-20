@@ -3,6 +3,7 @@ const min_score = 1
 const max_score = 38
 // отправления с Комунары
 const deperts_kom = ["6:50", "7:37", "8:40", "9:40", "11:35", "12:54", "13:50", "15:15", "16:46", "17:55", "18:45", "19:45", "22:45"]
+const fast_deperts = ["6:50", "7:37", "15:15", "17:55", "11:20", "18:14", "19:15", "20:15"]
 // отправления с д. Фёдоровка
 const deperts_fed = ["5:23", "7:10", "8:10", "10:28", "11:20", "12:20", "13:20", "14:18", "15:33", "17:20", "18:14", "19:15", "20:15", "21:55"]
 const stops_name = [
@@ -39,19 +40,27 @@ function render_depends(deperts, departures_list) {
     let m = parseInt(parts[1]);
     let bef_dep = (h * 60 + m) - (curr_h * 60 + curr_m)
     let departure = document.createElement("li")
+    let underlined = "underlined"
+    if (fast_deperts.includes(deperts[i])) underlined = ""
 
-    if (bef_dep > 0 && bef_dep <= 60){
-        departure.className = "green depend"
+
+    if (bef_dep >= 0 && bef_dep <= 5){
+        departure.className = `red depend ${underlined}`
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
     }
-    else if (bef_dep >= 0 && bef_dep <= 150){
-        departure.className = "yelloy depend"
+    else if (bef_dep > 0 && bef_dep <= 60){
+        departure.className = `green depend ${underlined}`
+        departure.innerText = deperts[i]
+        departures_list.appendChild(departure)
+    }
+    else if (bef_dep > 0 && bef_dep <= 150){
+        departure.className = `yelloy depend ${underlined}`
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
     }
     else {
-        departure.className = "gray depend"
+        departure.className = `gray depend ${underlined}`
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
     }
