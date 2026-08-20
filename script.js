@@ -40,12 +40,12 @@ function render_depends(deperts, departures_list) {
     let bef_dep = (h * 60 + m) - (curr_h * 60 + curr_m)
     let departure = document.createElement("li")
 
-    if (bef_dep > 0 && bef_dep <= 90){
+    if (bef_dep > 0 && bef_dep <= 60){
         departure.className = "green depend"
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
     }
-    else if (bef_dep >= 0 && bef_dep > 90 && bef_dep <= 250){
+    else if (bef_dep >= 0 && bef_dep <= 200){
         departure.className = "yelloy depend"
         departure.innerText = deperts[i]
         departures_list.appendChild(departure)
