@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+:root{
+    --green: rgb(11, 172, 91);
+    --yelloy: rgb(235, 219, 1);
+    --gray: rgb(138, 138, 138);
+    --black: #000;
+}
+
+
 body{
     font-family: "Montserrat", serif;
 }
@@ -46,6 +55,43 @@ button:active{
     margin-bottom: 75px;
 }
 
-.gray{
-    color: rgb(138, 138, 138);
+ul {
+  list-style-type: none;
 }
+
+#now-time {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.depend {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.departures-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+.gray{
+    color: var(--gray);
+}
+.green {
+    color: var(--green);
+    font-weight: 800;
+}
+.yelloy {
+    color: var(--yelloy);
+    font-weight: 800;
+}
+.black {
+    color: var(--black);
+    font-weight: 800;
+    font-size: 22px;
+}
+
+
