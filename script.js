@@ -88,7 +88,7 @@ function render_depends(deperts, departures_list, nearest_time_id) {
         }
     }
 
-    nearest_time.innerHTML = `Ближайшее отправление через <b>${min_time} мин</b>`
+    nearest_time.innerHTML = `Ближайшее отправление через <b>${Math.floor(min_time / 60)} ч ${min_time % 60} мин</b>`
 }
 function update_time() {
     const now = new Date()
