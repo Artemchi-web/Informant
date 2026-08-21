@@ -31,7 +31,7 @@ function render_stops() {
     for(let i = 0; i < stops_name.length; i++) {
     let stop = document.createElement("li")
     if (i == next_audio_score - 1) {
-        top.innerHTML = `<b class="depend black">${stops_name[i]}</b>`
+        stop.innerHTML = `<b class="depend black">${stops_name[i]}</b>`
     }
     else {
         stop.innerHTML = `<span class="gray depend">${stops_name[i]}</span>`
