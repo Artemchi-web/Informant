@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-:root{
+:root {
     --green: rgb(11, 172, 91);
     --yelloy: rgb(235, 219, 1);
     --gray: rgb(138, 138, 138);
@@ -9,19 +9,19 @@
     --red: rgb(204, 52, 52);
 }
 
-
-body{
+body {
     font-family: "Montserrat", serif;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-button{
+/* Селекторы для всех типов кнопок */
+button {
     font-family: "Montserrat", serif;
     font-weight: 500;
     width: 50vw;
@@ -33,26 +33,28 @@ button{
     font-size: 30px;
     margin-bottom: 10px;
 }
-
-button:active{
+button:active {
     transform: scale(1.03);
 }
-
-#next-audio-info{
+#next-audio-info {
     margin-bottom: 25px;
 }
-
-#control-left{
+#control-left {
+    width: 100px;
+    height: 100px;
+}
+#control-right {
     width: 100px;
     height: 100px;
 }
 
-#control-right{
-    width: 100px;
-    height: 100px;
+
+p{
+    margin: 0;
+    font-size: 20px;
 }
 
-.container{
+.container {
     margin-bottom: 75px;
 }
 
@@ -79,7 +81,8 @@ ul {
     justify-content: center;
 }
 
-.gray{
+/* Селекторы цветовой градации */
+.gray {
     color: var(--gray);
 }
 .green {
@@ -100,13 +103,10 @@ ul {
     font-weight: 800;
 }
 
+/* Специальные теги свойств */
 .underlined {
     text-decoration: underline;
 }
 
-p{
-    margin: 0;
-    font-size: 20px;
-}
 
 
