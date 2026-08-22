@@ -4,7 +4,7 @@ const max_score = 38
 
 // отправления с Комунары
 const deperts_kom = ["6:50", "7:37", "8:40", "9:40", "11:35", "12:54", "13:50", "15:15", "16:46", "17:55", "18:45", "19:45", "22:45"]
-const fast_deperts = ["6:50", "7:37", "15:15", "17:55", "11:20", "18:14", "19:15", "20:15"]
+const fast_deperts = ["6:50", "15:15", "17:55", "11:20", "18:14", "19:15", "20:15"]
 // отправления с д. Фёдоровка
 const deperts_fed = ["5:23", "7:10", "8:10", "10:28", "11:20", "12:20", "13:20", "14:18", "15:33", "17:20", "18:14", "19:15", "20:15", "21:55"]
 const stops_name = [
@@ -88,7 +88,14 @@ function render_depends(deperts, departures_list, nearest_time_id) {
         }
     }
 
-    nearest_time.innerHTML = `Ближайшее отправление через <b>${Math.floor(min_time / 60)} ч ${min_time % 60} мин</b>`
+    let cl = "gray"
+    if (min_time < 5) cl = "red"
+    else if (min_time < 60) cl = "green"
+    else if (min_time < 120) cl = "yelloy"
+    
+    if (min_time == 60*24) nearest_time.innerHTML = "<b>Сегодня больше нету отправлений!</b>"
+    else if (min_time == 0) nearest_time.innerHTML = `До отправления <b class="${cl}"><1 мин</b>`
+    else nearest_time.innerHTML = `Ближайшее отправление через <b class="${cl}">${Math.floor(min_time / 60)} ч ${min_time % 60} мин</b>`
 }
 function update_time() {
     const now = new Date()
